@@ -6,6 +6,12 @@ public class Board
   private int id;
   private String name;
 
+  public Board(int id, String name)
+  {
+    this.id = id;
+    this.name = name;
+  }
+
   public int getId()
   {
     return id;
@@ -24,5 +30,15 @@ public class Board
   public void setName(String name)
   {
     this.name = name;
+  }
+
+  @Override
+  public String toString()
+  {
+    final StringBuilder sb = new StringBuilder("Board{");
+    sb.append("id=").append(id);
+    sb.append(", name='").append(name).append('\'');
+    sb.append('}');
+    return sb.toString();
   }
 }
