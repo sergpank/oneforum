@@ -1,0 +1,25 @@
+Configuration:
+  status: INFO
+  name: Log4j2YAMLConfig
+  properties:
+    property:
+    - name: pattern
+      value: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+
+  appenders:
+    Console:
+      name: STDOUT
+      PatternLayout:
+        Pattern: ${pattern}
+
+  Loggers:
+    logger:
+    - name: console_logger
+      level: TRACE
+      additivity: true
+      AppenderRef:
+        ref: STDOUT
+    Root:
+      level: TRACE
+      AppenderRef:
+        ref: STDOUT
