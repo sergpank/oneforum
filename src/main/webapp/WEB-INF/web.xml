@@ -6,10 +6,18 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
+    <servlet-name>boards</servlet-name>
+    <servlet-class>md.onemap.forum.servlet.BoardsServlet</servlet-class>
+  </servlet>
+  <servlet>
     <servlet-name>hello</servlet-name>
-    <servlet-class>md.onemap.forum.HelloServlet</servlet-class>
+    <servlet-class>md.onemap.forum.servlet.HelloServlet</servlet-class>
   </servlet>
 
+  <servlet-mapping>
+    <servlet-name>boards</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>hello</servlet-name>
     <url-pattern>/hello</url-pattern>
